@@ -1,5 +1,5 @@
-import { effect } from "./src/effect"
-import { noEffect } from "./src/noEffect"
+import { effect } from "./src"
+import { noEffect } from "./src"
 
 noEffect()
 
