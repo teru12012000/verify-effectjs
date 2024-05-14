@@ -7,14 +7,22 @@ export const effect = () => {
     console.log("割り算：25÷5と25÷0")
 
     try {
-        console.log(divideEffect(25, 5))
+        Effect.runSync(
+            divideEffect(25, 5).pipe(
+                Effect.map((result) => console.log(result)),
+            ),
+        )
     } catch (err) {
         console.log(err)
     }
 
     try {
-        console.log(divideEffect(25, 0))
+        Effect.runSync(
+            divideEffect(25, 0).pipe(
+                Effect.map((result) => console.log(result)),
+            ),
+        )
     } catch (err) {
-        console.log(err)
+        console.log("エラー")
     }
 }
